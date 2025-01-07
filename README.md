@@ -49,6 +49,6 @@ def check_html_file(file_path):
     return result
 
 # Example: Check HTML file located in Colab
-file_path = 'https://seselecom.github.io'  # Replace with your actual file path
+file_path = 'https://seselecom.github.io/README.md'  # Replace with your actual file path
 validation_result = check_html_file(file_path)
 print(validation_result)
