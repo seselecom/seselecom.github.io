@@ -1,54 +1,32 @@
-# Import necessary libraries
-from html.parser import HTMLParser
-from urllib.request import urlopen
+# Simple Static Website (PHP Fusion-Like Design)
 
-# HTMLValidator class for error checking
-class HTMLValidator(HTMLParser):
-    def __init__(self):
-        super().__init__()
-        self.errors = []
+This is a simple static website inspired by the basic layout of PHP Fusion. The website features:
 
-    def handle_starttag(self, tag, attrs):
-        # Track all tags
-        pass
+- A banner section.
+- Navigation options to pick different pages.
+- A news feed section.
+- A space for add-ons on the right side.
+- A footer with centered text.
 
-    def handle_endtag(self, tag):
-        # Track all closing tags
-        pass
+## Live Website
 
-    def handle_startendtag(self, tag, attrs):
-        # Track self-closing tags
-        pass
+You can view the live version of the website hosted on GitHub Pages here:
 
-    def handle_data(self, data):
-        # Handle raw text (can be checked later for some potential issues)
-        pass
+[https://seselecom.github.io/>/](https://seselecom.github.io)
 
-    def error(self, message):
-        # Collect errors for the report
-        self.errors.append(message)
+*Make sure to replace `<your-username>` and `<repository-name>` with your actual GitHub username and repository name.*
 
-    def validate_html(self, html_content):
-        try:
-            self.feed(html_content)
-        except Exception as e:
-            return f"Error while parsing: {e}"
+## How to View Locally
 
-        if not self.errors:
-            return "HTML is valid!"
-        else:
-            return "\n".join(self.errors)
+1. Clone or download this repository.
+2. Open the `index.html` file in your web browser to see the website locally.
 
-# Testing HTML file
-def check_html_file(file_path):
-    with open(file_path, 'r') as file:
-        html_content = file.read()
+## Files in this Repository
 
-    validator = HTMLValidator()
-    result = validator.validate_html(html_content)
-    return result
+- **`index.html`**: The main HTML file.
+- **`style.css`**: The CSS file for styling the website.
 
-# Example: Check HTML file located in Colab
-file_path = 'https://seselecom.github.io/README.md'  # Replace with your actual file path
-validation_result = check_html_file(file_path)
-print(validation_result)
+## Customization
+
+- You can modify the HTML content to update text and links.
+- Adjust the CSS to change styles like fonts, colors, and layout.
