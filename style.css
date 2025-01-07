@@ -1,0 +1,90 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body & General Styles */
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Banner Section */
+header {
+    background-color: #e0e0e0; /* Whitish silver background */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 30px;
+    color: #333;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #4CAF50; /* Hover color */
+}
+
+/* Main Content Layout */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.news-feed,
+.addons {
+    width: 48%; /* Each section takes half width */
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-feed h2,
+.addons h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.news-feed p,
+.addons p {
+    font-size: 13px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
